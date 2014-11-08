@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap-sprockets
+//= require greensock/TweenMax
+//= require greensock/easing/EasePack
 //= require_tree .
