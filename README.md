@@ -9,29 +9,3 @@ This application requires:
 - Rails 4.1.5
 
 Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
----------------
-
-Documentation and Support
--------------------------
-
-Issues
--------------
-
-Similar Projects
-----------------
-
-Contributing
-------------
-
-Credits
--------
-
-License
--------
-=======
-sample-rails-gsap-prompter
-==========================
-
-demo prompter with gsap
