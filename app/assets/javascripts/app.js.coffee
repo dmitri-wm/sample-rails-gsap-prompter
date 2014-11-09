@@ -1,6 +1,6 @@
 App = angular.module('scroller',["ui.bootstrap-slider", "textAngular"])
 
-App.controller "MainCtrl", ($scope)->
+App.controller "MainCtrl", ['$scope', ($scope)->
   $scope.progress = 0
   $scope.timeScale = 1
   $scope.tl = new TimelineMax(paused: true)
@@ -22,5 +22,4 @@ App.controller "MainCtrl", ($scope)->
 
     unless $scope.tl.paused()
       $scope.tl.restart()
-
-
+]
