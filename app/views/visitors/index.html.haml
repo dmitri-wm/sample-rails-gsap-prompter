@@ -13,7 +13,7 @@
           %i.glyphicon.glyphicon-forward
         .btn.btn-primary
           %slider#slider(ng-model="progress" min="0" max="100" step=1 on-slide="updateTlProgress()")
-        %select#speed.selectpicker.speeder(data-style="btn-primary")
+        %select#speed.selectpicker.speeder(data-style="btn-primary" ng-model="timeScale" ng-change="updateTimeScale()")
           %option(value=1 selected="true" ) x1
           %option(value=2) x2
           %option(value=4) x4
