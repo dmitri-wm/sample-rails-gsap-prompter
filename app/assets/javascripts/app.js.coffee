@@ -17,7 +17,7 @@ App.controller "MainCtrl", ($scope)->
   $scope.$watch "content", ->
     height = $(".content").height()
     $scope.tl.clear()
-    $scope.tl.staggerTo ".content", 10, y:-height, startAt: {y: 400}, force3D: true
+    $scope.tl.staggerTo ".content", 15, y:-height, startAt: {y: 400}, force3D: true
     $scope.updateTimeScale()
 
     unless $scope.tl.paused()
