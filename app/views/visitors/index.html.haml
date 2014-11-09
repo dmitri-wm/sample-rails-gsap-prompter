@@ -1,23 +1,21 @@
-%h3 Scroller
-.scroller
-  .body
-    .content
-      %ul
-        %li Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
-        %li Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
-        %li Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.
-        %li Pellentesque fermentum dolor. Aliquam quam lectus, facilisis auctor, ultrices ut, elementum vulputate, nunc.
-  .controll
-    .btn-group
-      %a#back.btn.btn-primary
-        %i.glyphicon.glyphicon-backward
-      %a#pause.btn.btn-primary
-        %i.glyphicon.glyphicon-pause
-      %a#forward.btn.btn-primary
-        %i.glyphicon.glyphicon-forward
-      .btn.btn-primary
-        #slider
-      %select#speed.selectpicker.speeder(data-style="btn-primary")
-        %option(value=1 selected="true" ) x1
-        %option(value=2) x2
-        %option(value=4) x4
+%div(ng-controller="MainCtrl")
+  %h3 Scroller
+  .scroller
+    .body
+      .content(ng-bind-html="content")
+    .controll
+      .btn-group
+        %a#back.btn.btn-primary(ng-click="tl.reverse()")
+          %i.glyphicon.glyphicon-backward
+        %a#pause.btn.btn-primary(ng-click="tl.paused(!tl.paused())")
+          %i.glyphicon(ng-class="tl.paused() ? 'glyphicon-play' : 'glyphicon-pause'")
+        %a#forward.btn.btn-primary(ng-click="tl.reversed(false)")
+          %i.glyphicon.glyphicon-forward
+        .btn.btn-primary
+          %slider#slider(ng-model="progress" min="0" max="100" step=1 on-slide="updateTlProgress()")
+        %select#speed.selectpicker.speeder(data-style="btn-primary")
+          %option(value=1 selected="true" ) x1
+          %option(value=2) x2
+          %option(value=4) x4
+  .col-sm-4
+    %text-angular(ng-model="content")

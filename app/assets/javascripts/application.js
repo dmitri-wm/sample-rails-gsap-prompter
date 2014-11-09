@@ -13,6 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require angular
 //= require greensock/TweenMax
 //= require greensock/easing/EasePack
-//= require_tree .
+//= require_tree ./libs
+//= require ./app

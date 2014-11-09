@@ -388,7 +388,6 @@ section {
   width: auto !important;
 }
 
-
 .scroller{
   position: relative;
   @extend .col-sm-4;
@@ -413,4 +412,8 @@ section {
     width: 370px;
     height: auto;
   }
+}
+
+.content{
+  width: 100%;
 }
